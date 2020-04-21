@@ -9,6 +9,7 @@ ENV APPDIR=/opt/MySensors
 
 #RUN chmod a+x /run.sh 
 RUN apk update
+RUN apk add --no-cache jq
 RUN apk add --no-cache make
 RUN apk add --no-cache g++
 RUN apk add --no-cache git
