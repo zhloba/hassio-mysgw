@@ -7,7 +7,7 @@ ENV LANG C.UTF-8
 ENV CONFIG_PATH=/data/options.json
 ENV APPDIR=/opt/MySensors
 
-RUN chmod a+x /run.sh 
+#RUN chmod a+x /run.sh 
 RUN apk update
 RUN apk add --no-cache make
 RUN apk add --no-cache g++
