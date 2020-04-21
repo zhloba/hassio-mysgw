@@ -1,0 +1,55 @@
+{
+    "name": "MySensors Gateway",
+    "version": "0.0.1-rc1",
+    "slug": "mysgw",
+    "description": "Hass.io add-on for MySensors Gateway",
+    "url": "https://github.com/zhloba/hassio-mysgw",
+    "arch": [
+        "amd64",
+        "i386",
+        "armhf"
+    ],
+    "startup": "before",
+    "boot": "auto",
+    "devices": [
+        "/dev/mem:/dev/mem:rw"
+    ],
+    "privileged": [
+        "SYS_RAWIO",
+        "SYS_ADMIN",
+        "NET_ADMIN"
+    ],
+    "gpio": true,
+    "full_access": true,
+    "host_network": true,
+    "hassio_api": true,
+    "ports": {
+        "5003/tcp": 5003
+    },
+    "map": [
+        "config:rw",
+        "share:rw",
+        "ssl"
+    ],
+    "options": {
+        "log_level": "info",
+        "type": "mqtt",
+        "mqtt_server": "addon_core_mosquitto.hassio",
+        "transport": "rf24",
+        "mqtt_clientid": "mysgw-00",
+        "mqtt_topicin": "mysensors-in",
+        "mqtt_topicout": "mysensors-out"
+    },
+    "schema": {
+        "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
+        "type": "match(^(none|ethernet|mqtt)$)",
+        "mqtt_server": "str",
+        "transport": "match(^(none|rf24|rs485|rfm95|rfm69)$)",
+        "mqtt_clientid": "str",
+        "mqtt_topicin": "str",
+        "mqtt_topicout": "str"
+    },
+    "environment": {
+        "LOG_FORMAT": "[{LEVEL}]: {MESSAGE}"
+    }
+}
