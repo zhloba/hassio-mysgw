@@ -15,4 +15,4 @@ cd $APPDIR
 ./configure --spi-spidev-device=/dev/spidev0.0 --my-transport=$MYSGW_TRN --my-gateway=$MYSGW_TYPE $MQTT_OPTS
 make && make install
 
-/usr/local/bin/mysgw
+#/usr/local/bin/mysgw
