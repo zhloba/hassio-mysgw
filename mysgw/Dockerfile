@@ -7,17 +7,16 @@ ENV LANG C.UTF-8
 ENV CONFIG_PATH=/data/options.json
 ENV APPDIR=/opt/MySensors
 
-RUN apk update
-RUN apk add --no-cache jq
-RUN apk add --no-cache linux-headers
-RUN apk add --no-cache make
-RUN apk add --no-cache g++
-RUN apk add --no-cache git    
+RUN apk update && apk add --no-cache jq \
+    linux-headers \
+    make \
+    g++ \
+    git 
 RUN git clone https://github.com/mysensors/MySensors.git --branch master $APPDIR
 
 # Copy data for add-on
 COPY run.sh /
 RUN chmod a+x /run.sh
 
-RUN ./run.sh
+RUN /run.sh
 CMD ["/usr/local/bin/mysgw"]

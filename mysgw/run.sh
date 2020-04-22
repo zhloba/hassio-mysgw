@@ -1,5 +1,5 @@
 #!/usr/bin/with-contenv bash
-source /usr/lib/hassio-addons/base.sh
+#source /usr/lib/hassio-addons/base.sh
 
 echo "MySensors Gateway"
 MYSGW_TYPE="$(jq --raw-output '.type' $CONFIG_PATH)"
