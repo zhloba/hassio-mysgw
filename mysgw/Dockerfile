@@ -7,14 +7,12 @@ ENV LANG C.UTF-8
 ENV CONFIG_PATH=/data/options.json
 ENV APPDIR=/opt/MySensors
 
-#RUN chmod a+x /run.sh 
 RUN apk update
 RUN apk add --no-cache jq
 RUN apk add --no-cache linux-headers
 RUN apk add --no-cache make
 RUN apk add --no-cache g++
-RUN apk add --no-cache git
-    #&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache \
+RUN apk add --no-cache git    
 RUN git clone https://github.com/mysensors/MySensors.git --branch master $APPDIR
 
 # Copy data for add-on

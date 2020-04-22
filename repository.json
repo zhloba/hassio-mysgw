@@ -1,5 +1,5 @@
 {
-    "name": "MySensors Raspberry Pi Gateway Hass.io Add-on by Zhloba",
+    "name": "MySensors Gateway Hass.io Add-on",
     "url": "https://github.com/zhloba/hassio-mysgw",
     "maintainer": "Alexander Zhloba <zhlobale@gmail.com>"
 }

@@ -1,6 +1,6 @@
 {
     "name": "MySensors Gateway",
-    "version": "0.0.1-rc1",
+    "version": "0.0.2",
     "slug": "mysgw",
     "description": "Hass.io add-on for MySensors Gateway",
     "url": "https://github.com/zhloba/hassio-mysgw",
