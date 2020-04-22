@@ -19,5 +19,5 @@ RUN git clone https://github.com/mysensors/MySensors.git --branch master $APPDIR
 COPY run.sh /
 RUN chmod a+x /run.sh
 
-RUN [ "/run.sh" ]
+RUN ./run.sh
 CMD ["/usr/local/bin/mysgw"]
