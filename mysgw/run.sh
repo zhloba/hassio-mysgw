@@ -1,5 +1,4 @@
 #!/usr/bin/with-contenv bash
-#source /usr/lib/hassio-addons/base.sh
 
 echo "MySensors Gateway"
 MYSGW_TYPE="$(jq --raw-output '.type' $CONFIG_PATH)"
@@ -15,4 +14,4 @@ cd $APPDIR
 ./configure --spi-spidev-device=/dev/spidev0.0 --my-transport=$MYSGW_TRN --my-gateway=$MYSGW_TYPE $MQTT_OPTS
 make && make install
 
-#/usr/local/bin/mysgw
+/usr/local/bin/mysgw
