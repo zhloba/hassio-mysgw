@@ -20,6 +20,7 @@
     "host_ipc": true,
     "host_dbus": true,
     "hassio_role": "admin",
+    "kernel_modules": true,
     "privileged": [
         "SYS_RAWIO",
         "SYS_ADMIN",
