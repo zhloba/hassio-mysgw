@@ -36,7 +36,7 @@
     "options": {
         "log_level": "info",
         "type": "mqtt",
-        "mqtt_server": "addon_core_mosquitto.hassio",
+        "mqtt_server": "core-mosquitto",
         "mqtt_port": "1883",
         "transport": "rf24",
         "mqtt_clientid": "mysgw-00",
